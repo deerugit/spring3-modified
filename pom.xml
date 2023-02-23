@@ -6,18 +6,19 @@
     <groupId>com.mkyong</groupId>
     <artifactId>spring-mvc-hello-world</artifactId>
     <packaging>war</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.2-SNAPSHOT</version>
     <name>spring web mvc</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>11</jdk.version>
-        <spring.version>5.2.22.RELEASE</spring.version>
         <servletapi.version>4.0.4</servletapi.version>
         <thymeleaf.spring.version>3.0.15.RELEASE</thymeleaf.spring.version>
         <webjars.version>5.2.0</webjars.version>
         <hamcrest.version>2.2</hamcrest.version>
         <junit.version>5.9.0</junit.version>
+		<spring.version>3.2.13.RELEASE</spring.version>
+		<jstl.version>1.2</jstl.version>
     </properties>
 
     <dependencies>
@@ -91,7 +92,10 @@
                     <target>${jdk.version}</target>
                 </configuration>
             </plugin>
-
+<plugin>
+      <artifactId>maven-war-plugin</artifactId>
+      <version>3.2.2</version>
+    </plugin>
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
